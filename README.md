@@ -8,7 +8,7 @@ Create an application on https://scalingo.com, then:
 
 ```shell
 scalingo --app my-app git-setup
-git push scalingo master
+git push scalingo main
 ```
 
 And that's it!
