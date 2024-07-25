@@ -1,0 +1,34 @@
+body {
+    @apply min-h-screen;
+    color: #373a3c;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+a {color: #0275d8; text-decoration: none; background-color: transparent;}
+a:focus, a:hover {color: #014c8c; text-decoration: none;}
+a:focus {outline: thin dotted; outline-offset: -2px;}
+.container {@apply text-center}
+h1 { @apply text-4xl font-bold;}
+h2 { @apply text-2xl;}
+small {margin-top: 0;}
+.btn {
+    @apply uppercase transform-none m-2 cursor-pointer inline-block align-middle whitespace-nowrap rounded-2xl;
+    border-color: #0275d8;
+    color: #fff;
+}
+.btn:hover, .btn:focus,
+.btn:active {background-color: #025aa5; border-color: #01549b; color: #fff; background-image: none;}
+.btn:active:focus, .btn:active:hover {background-color: #014682; border-color: #01315a; color: #fff;}
+.scalingo-logo {}
+.heart-logo {}
+.tech-logo {width:65px;height:65px;}
+@media (min-width:768px){
+    .container {width: 800px;}
+    .one-liner {display: block;}
+}
+@media (max-width:767px){
+    .scalingo-logo, .heart-logo, .tech-logo {display: block; position: unset; margin: 0 auto;}
+    .scalingo-logo, .heart-logo {margin-bottom: 1rem;}
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Sample Next.js App in Standalone Mode",
+  "description": "Sample web application using the Next.js framework in standalone mode",
+  "logo": "https://raw.githubusercontent.com/Scalingo/sample-nextjs-standalone/master/public/next.svg",
+  "repository": "https://github.com/Scalingo/sample-nextjs-standalone",
+  "website": "https://scalingo.com",
+  "formation": {
+    "web": {
+      "amount": 1,
+      "size": "S"
+    }
+  }
+}
