@@ -4,5 +4,6 @@
 set -e
 
 # Run build and start commands
+npm install
 npm run build
 npm run start
