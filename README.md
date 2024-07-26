@@ -8,14 +8,14 @@ Create an application on https://scalingo.com, then:
 
 ```shell
 scalingo --app my-app git-setup
-git push scalingo master
+git push scalingo main
 ```
 
 And that's it!
 
 ## Deploy via One-Click
 
-[![Deploy to Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://my.scalingo.com/deploy)
+[![Deploy to Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://my.scalingo.com/deploy?source=https://github.com/Scalingo/sample-nextjs-standalone#main)
 
 ## Running Locally
 
