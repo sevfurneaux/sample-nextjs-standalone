@@ -1,5 +1,6 @@
 import { revalidatePath } from "next/cache";
 
+export const dynamicParams = true;
 export const revalidate = false;
 
 async function revalidateHomePage() {
