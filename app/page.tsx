@@ -26,10 +26,6 @@ export default function HomePage() {
           Revalidate Page
         </button>
       </form>
-
-      <p className="text-sm text-gray-500 mt-2">
-        This page won't update unless you click the button.
-      </p>
     </main>
   );
 }
