@@ -1,35 +1,35 @@
-"use client";
-
 import { revalidatePath } from "next/cache";
-import { useTransition } from "react";
 
-export const revalidate = false; // Fully static
+export const revalidate = false;
+
+async function revalidateHomePage() {
+  "use server";
+  revalidatePath("/");
+}
 
 export default function HomePage() {
   const currentDate = new Date().toLocaleString();
-  const [isPending, _] = useTransition();
 
   return (
     <main className="p-4">
       <h1 className="text-xl font-bold">
-        Static Page with Inline Revalidation
+        Static Page with Server Revalidation
       </h1>
       <p>Current date (server-rendered):</p>
       <p className="text-blue-600 font-mono">{currentDate}</p>
-      <form
-        action={async () => {
-          "use server";
-          revalidatePath("/");
-        }}
-        className="mt-4"
-      >
+
+      <form action={revalidateHomePage} className="mt-4">
         <button
           type="submit"
           className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
         >
-          {isPending ? "Revalidating..." : "Revalidate Page"}
+          Revalidate Page
         </button>
       </form>
+
+      <p className="text-sm text-gray-500 mt-2">
+        This page won't update unless you click the button.
+      </p>
     </main>
   );
 }
